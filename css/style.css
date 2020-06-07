@@ -1,0 +1,76 @@
+body{
+    background: #000;
+}
+
+.clock{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: khaki;
+    font-size: 60px;
+    padding: 0px 5px 0px 5px;
+}
+
+.greeting{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: khaki;
+    font-size: 40px;
+    padding: 0px 5px 0px 5px;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.greeting {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 42% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    42% { border-color: khaki }
+  }
+
+
+  /*---*/
+  #quote{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: khaki;
+    font-size: 30px;
+    padding: 0px 5px 0px 5px; 
+  }
+
+  .carousel{
+    margin-top: 50px;
+  }
+  .carousel-inner{
+    height: 100px;
+  }
+  .carousel-caption{
+    color: #eee6f5;
+    top: 50%;
+  }
+
+  .carousel-caption p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 23px;
+  }
+  

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/script. js"></script>
+</head>
+<body id="body">
+  <section>
+    <div class="container">
+      <div class="content">
+        <div class="row">
+          <div id="greet-name" class="greeting"></div>
+          <div id="clock-display" class="clock"></div>
+        </div>
+       
+        <div class="row">
+          <div id="quote" class="col-12">
+            <div class="text-center">
+              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="carousel-caption">
+                      <p>"Udah sholat blom?"</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <p>"NABUUUUNG!!!1!1!!11!!"</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <p>"Gapapa makan banyak (yang sehat); asal olahraga juga!"</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <p>"I am a doctor, with the help and will of Allah SWT, everything will be fine."</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <p>"Kamu tuh berharga, kamu tuh mampu, kamu tuh bisa, ayo jangan males ANJ**!"</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <p>"Ibumu, Ibumu, Ibumu. Baru setelah itu Ayahmu."</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <p>"Perlakukanlah kedua orangtuamu seperti raja, maka rezekimu akan lancar jaya."</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <p>"Jangan sebut nama beliau dalam do'amu ketika lagi bucin-bucninye, bisa aje abis Lu do'a eh beliau malah vcs sama orang lain."</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <p>"Ini semua punya orangtuaku. Apa yang ku punya sekarang? Cukup ga yah buat beli susu anak?"</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <p>"Lo udh ngerasa sukses sekarang? Iye? Yakin? Udah ngasih kabar ke oratu blom dalam minggu ini?"</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <p>"Gue ga nyesal ketemu dia, gue cuma nyesal karena udah bohongin dia."</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <p>"Gimana rasanya sekarang? Manis kan? Untung dulu kamu kerja keras."</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <p>"Cuma mau bilangin dari sekarang, 5 tahun kedepan akan ada banyak masalah dan hikmah untuk kehidupan kita. Eh kamu, ding."</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <p>"World is really fucked up. But don't forget pray to Allah SWT."</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript">
+    function showTime(){
+      var date = new Date();
+      var h = date.getHours();
+      var m = date.getMinutes();
+      var s = date.getSeconds();
+      var session = "AM";
+      var greeting = "Good Morining,"
+      var i = 0;
+      var speed = 50;
+
+      if(h == 0){
+        h = 12;
+      }
+
+      if(h > 12){
+        document.getElementById("body").style.background = "#c79306";
+        h = h - 12;
+        session = "PM";
+        greeting = "Good Afternoon,"
+        if(h > 6){
+          document.getElementById("body").style.background = "#0f011c";
+          greeting = "Good Evening,"
+        }
+      }
+
+      var time = h + ":" + m + ":" + s + " " + session;
+      var say = greeting + " " + "Yaya."
+
+      document.getElementById("clock-display").innerText = time;
+      document.getElementById("clock-display").textContent = time;
+
+      document.getElementById("greet-name").innerText = say;
+      //document.getElementById("greet-name").textContent = say;
+      
+      setTimeout(showTime,1000);
+    }
+
+    showTime();
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
