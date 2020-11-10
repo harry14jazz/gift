@@ -44,7 +44,7 @@
                   </div>
                   <div class="carousel-item">
                     <div class="carousel-caption">
-                      <p>"Kamu tuh berharga, kamu tuh mampu, kamu tuh bisa, ayo jangan males ANJ**!"</p>
+                      <p>"Kamu tuh berharga, kamu tuh mampu, kamu tuh bisa, ayo jangan males!!1!1!1!"</p>
                     </div>
                   </div>
                   <div class="carousel-item">
@@ -59,7 +59,7 @@
                   </div>
                   <div class="carousel-item">
                     <div class="carousel-caption">
-                      <p>"Jangan sebut nama beliau dalam do'amu ketika lagi bucin-bucninye, bisa aje abis Lu do'a eh beliau malah vcs sama orang lain."</p>
+                      <p>"Jangan sebut nama beliau dalam do'amu ketika lagi bucin-bucninye, bisa aje abis Lu do'a eh beliau malah jalan sama orang lain."</p>
                     </div>
                   </div>
                   <div class="carousel-item">
@@ -129,14 +129,17 @@
         h = h - 12;
         session = "PM";
         greeting = "Good Afternoon,"
-        if(h > 6){
+        if(h > 6 && h < 11){
+          greeting = "Good Night,"
+          document.getElementById("body").style.background = "#0f011c";
+        }else if(h > 6 ){
           document.getElementById("body").style.background = "#0f011c";
           greeting = "Good Evening,"
         }
       }
 
       var time = h + ":" + m + ":" + s + " " + session;
-      var say = greeting + " " + "Yaya."
+      var say = greeting + " " + "Jazz."
 
       document.getElementById("clock-display").innerText = time;
       document.getElementById("clock-display").textContent = time;
